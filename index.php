@@ -119,7 +119,7 @@ include_once "base.php";
     </div>
   </div>
 </div>
-   <!--end Modal -->
+  <!--end Modal -->
 
     <!-- start header -->
     <section id="header">
@@ -187,8 +187,9 @@ include_once "base.php";
 
             <?php
             $exps=$Experience->all();
-            echo $exps;
-            foreach($exps as $exp){
+            // echo $exps;
+
+            foreach($exps as $key => $exp){
             ?>
 
               <div class="accordion-item">
@@ -197,24 +198,28 @@ include_once "base.php";
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse1"
+                    data-bs-target="#flush-collapse<?=$key+1?>"
                   >
-                    泰山職訓場-PHP資料庫網頁設計班
+                  <?php echo $exp['work'];?>
+                    
                   </button>
                 </h2>
-                <div id="flush-collapse1" class="accordion-collapse collapse">
+                <div id="flush-collapse<?=$key+1?>" class="accordion-collapse collapse">
                   <div class="accordion-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch.
+                  <?php
+                    echo $exp['period'];
+                    echo "<br>";
+                    echo $exp['detail'];
+                  ?>
                   </div>
                 </div>
               </div>
 
             <?php
-            }
-            ?>
+                }
+                ?>
 
+        </div>
             
 
               <!-- <div class="accordion-item">
@@ -313,14 +318,12 @@ include_once "base.php";
             </div> -->
 
             <button id="donlo">
-              <a href="/img/img1.jpg" download
-                ><span class="material-icons">cloud_download</span> Download
-                Resume</a
-              >
+              <a href="/img/img1.jpg" download>
+                <span class="material-icons">cloud_download</span> Download Resume
+              </a>
             </button>
-          </div>
           <div class="col-lg-6">
-            <img src="img/IMG_63542.jpg" style="width: 100%" />
+            <img src="img/IMG_63542.jpg" style="width: 100%"/>
           </div>
         </div>
       </div>
