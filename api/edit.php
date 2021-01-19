@@ -37,6 +37,12 @@ foreach($_POST['id'] as $key => $id){
         //     $row['acc']=$_POST['acc'][$key];
         //     $row['pw']=$_POST['pw'][$key];
         //  break;
+         case "myinfo":
+            $row['name']=$_POST['name'][$key];
+            $row['tel']=$_POST['tel'][$key];
+            $row['birth']=$_POST['birth'][$key];
+            $row['hobby']=$_POST['hobby'][$key];
+         break;
          case "skills":
             $row['ski']=$_POST['ski'][$key];
             $row['percentage']=$_POST['percentage'][$key];
@@ -44,6 +50,10 @@ foreach($_POST['id'] as $key => $id){
          case "profile":
             $row['descri']=$_POST['descri'][$key];
             $row['link']=$_POST['link'][$key];
+         break;
+         case "job":
+            $row['reqname']=$_POST['reqname'][$key];
+            $row['condi']=$_POST['condi'][$key];
          break;
          default:
          // case "introductions":

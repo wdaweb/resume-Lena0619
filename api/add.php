@@ -36,10 +36,10 @@ if(!empty($_POST['text'])){
             $data['descri']=$_POST['descri'];
             $data['link']=$_POST['link'];
         break;
-        case "menu":
-            $data['href']=$_POST['href'];
-            $data['sh']=1;
-        break;
+        case "job":
+            $data['reqname']=$_POST['reqname'];
+            $data['condi']=$_POST['condi'];
+         break;
         default:
         $data['sh']=1;
 

@@ -182,12 +182,10 @@ include_once "base.php";
             <div
               class="accordion accordion-flush bg-light"
               id="accordionFlushExample"
-              style="border-radius: 8% 8%"
             >
 
             <?php
             $exps=$Experience->all();
-            // echo $exps;
 
             foreach($exps as $key => $exp){
             ?>

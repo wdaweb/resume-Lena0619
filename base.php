@@ -9,6 +9,8 @@ $Experience=new DB('experience');
 $Picture=new DB('picture');
 $Skills=new DB('skills');
 $Profile=new DB('profile');
+$Myinfo=new DB('myinfo');
+$Job=new DB('job');
 
 
 

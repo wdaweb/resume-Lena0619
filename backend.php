@@ -89,11 +89,13 @@ if (empty($_SESSION['login'])) {
     <div class="container">
         <h2>後台管理</h2>
         <ul id="bacList">
-            <li style="display:inline;margin-right:25px"><a href="?do=introductions">介紹區管理</a></li>
-            <li style="display:inline;margin-right:25px"><a href="?do=experience">經驗區管理</a></li>
+            <li style="display:inline;margin-right:25px"><a href="?do=myinfo">個人基本資料管理</a></li>
+            <li style="display:inline;margin-right:25px"><a href="?do=introductions">自傳區管理</a></li>
+            <li style="display:inline;margin-right:25px"><a href="?do=experience">學經歷管理</a></li>
             <li style="display:inline;margin-right:25px"><a href="?do=picture">大頭照區管理</a></li>
             <li style="display:inline;margin-right:25px"><a href="?do=skills">技能區管理</a></li>
             <li style="display:inline;margin-right:25px"><a href="?do=profile">作品區管理</a></li>
+            <li style="display:inline;margin-right:25px"><a href="?do=job">求職條件管理</a></li>
         </ul>
 
         <div id="bacMain">
