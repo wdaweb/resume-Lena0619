@@ -414,8 +414,8 @@ h3.aboutme::before {
   border-radius: 50%;
   background: rgb(154, 205, 50, 0.5);
   position: absolute;
-  top: 10%;
-  left: 55%;
+  top: -10%;
+  left: 50%;
 
   z-index: -1;
 }
@@ -443,8 +443,8 @@ h3.aboutme::after {
 #about>div #donlo{
 background: transparent;
 border: 1px solid chartreuse;
-margin-top: 5px;
-margin-bottom: 55px;
+/* margin-top: 5px; */
+/* margin-bottom: 55px; */
 border-radius: 10px;
 }
 
@@ -489,7 +489,7 @@ h3.ski::after {
     /* background: rgba(195, 195, 196, 0.842); */
     background: rgba(224, 224, 226, 0.842);
     height: 350px;
-    width: ;
+    /* width: ; */
     /* box-shadow: inset 3px 1px 6px 2px gray, 3px 1px 6px 2px black; */
     box-shadow: inset 4px 1px 7px 2px rgb(235, 233, 233), 4px 2px 7px 2px black;
     padding-top: 10px;
@@ -578,12 +578,12 @@ h3.ski::after {
 
 /* end skills */
 
-/* start portfolio */
-  h3.portfolio {
+/* start work */
+  h3.work {
     position: relative;
     text-shadow: 3px 3px 10px #fff;
   }
-  h3.portfolio::before {
+  h3.work::before {
     content: "";
     width: 4rem;
     height: 4rem;
@@ -595,7 +595,7 @@ h3.ski::after {
   
     z-index: -1;
   }
-  h3.portfolio::after {
+  h3.work::after {
     content: "";
     width: 7rem;
     height: 7rem;
@@ -640,7 +640,7 @@ div.myWork:hover img {
 div.myWork:hover {
   box-shadow: 1px 1px 8px 4px white;
 }
-/* end Portfolio */
+/* end work */
 
 /* start contact */
 h3.dmam {
@@ -666,8 +666,8 @@ h3.dmam::after {
   border-radius: 50%;
   background: rgba(205, 190, 50, 0.5);
   position: absolute;
-  top: -280%;
-  left: 30%;
+  top: -260%;
+  left: 38%;
 
   z-index: -1;
 }

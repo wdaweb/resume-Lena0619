@@ -33,10 +33,11 @@ foreach($_POST['id'] as $key => $id){
          //    $row['sh']=($_POST['sh']==$id)?1:0;    //如果sh[]陣列裡有id,這個id的sh值就等於1
          // break;
 
-        //  case "admin":
-        //     $row['acc']=$_POST['acc'][$key];
-        //     $row['pw']=$_POST['pw'][$key];
-        //  break;
+         case "experience":
+            $row['work']=$_POST['work'][$key];
+            $row['period']=$_POST['period'][$key];
+            $row['detail']=$_POST['detail'][$key];
+         break;
          case "myinfo":
             $row['name']=$_POST['name'][$key];
             $row['tel']=$_POST['tel'][$key];

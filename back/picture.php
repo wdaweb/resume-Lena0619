@@ -1,10 +1,10 @@
 <div style="width:99%; height:87%; margin:auto; overflow:auto;">
-    <h3>大頭照管理</h3>
+    <h3>圖片管理</h3>
     <form method="post" action="api/edit.php">
         <table width="100%">
             <tbody>
                 <tr class="yel">
-                    <td width="68%">照片</td>
+                    <td width="68%">圖片</td>
                     <td width="7%">顯示</td>
                     <td width="7%">刪除</td>
                     <td></td>

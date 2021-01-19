@@ -64,7 +64,7 @@ include_once "base.php";
           <ul class="navlinks">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
               <a href=""  data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -161,13 +161,13 @@ include_once "base.php";
     <!-- end header -->
 
     <!-- start About -->
-    <section id="about" class="text-white pt-5">
+    <section id="about" class="text-white pt-5" style="height:100%">
       <div class="container" style="padding-top: 80px">
-        <h3 class="aboutme text-center m-2" style="color: white">About me</h3>
+        <h3 class="aboutme text-center m-2" style="color: white">About</h3>
         <div class="row" style="padding-top: 40px;">
           <div class="col-lg-6 wow bounceInUp" style="color: white;">
             <h5>Introduction</h5>
-            <p>
+            <p class="pb-3">
               <?php
               $intros = $Introductions->all(['sh'=>'1']);
               
@@ -178,9 +178,9 @@ include_once "base.php";
               ?>
             </p>
             <hr />
-            <h5>Experience</h5>
+            <h5 class="pt-3 pb-1">Experience</h5>
             <div
-              class="accordion accordion-flush bg-light"
+              class="accordion accordion-flush bg-light rounded"
               id="accordionFlushExample"
             >
 
@@ -190,24 +190,28 @@ include_once "base.php";
             foreach($exps as $key => $exp){
             ?>
 
-              <div class="accordion-item">
+              <div class="accordion-item" style="color:black;">
                 <h2 class="accordion-header">
                   <button
                     class="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#flush-collapse<?=$key+1?>"
+                    style="font-weight: 900;"
                   >
                   <?php echo $exp['work'];?>
                     
                   </button>
                 </h2>
                 <div id="flush-collapse<?=$key+1?>" class="accordion-collapse collapse">
-                  <div class="accordion-body">
+                  <div class="accordion-body p-2" style="background: #B5CAA0;">
                   <?php
-                    echo $exp['period'];
+                    echo "<span style='font-size:0.8rem'>".$exp['period']."</span>";
                     echo "<br>";
+                    echo "<br>";
+                    echo "<pre style='margin:0;font-weight:900'>";
                     echo $exp['detail'];
+                    echo "</pre>";
                   ?>
                   </div>
                 </div>
@@ -218,112 +222,25 @@ include_once "base.php";
                 ?>
 
         </div>
-            
 
-              <!-- <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse2"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseTwo"
-                  >
-                    仁寶電腦
-                  </button>
-                </h2>
-                <div id="flush-collapse2" class="accordion-collapse collapse">
-                  <div class="accordion-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseThree"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseThree"
-                  >
-                    澳洲打工度假
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseThree"
-                  class="accordion-collapse collapse"
-                >
-                  <div class="accordion-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFour">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFour"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseFour"
-                  >
-                    宜家貿易
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseFour"
-                  class="accordion-collapse collapse"
-                >
-                  <div class="accordion-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingFive">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseFive"
-                    aria-expanded="false"
-                    aria-controls="flush-collapseFive"
-                  >
-                    Starbucks
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapseFive"
-                  class="accordion-collapse collapse bg-dark"
-                >
-                  <div class="accordion-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch.
-                  </div>
-                </div>
-              </div>
-            </div> -->
-
-            <button id="donlo">
-              <a href="/img/img1.jpg" download>
+            <button id="donlo" class="my-5">
+              <a href="./others/ShiangYunLin.pdf" download>
                 <span class="material-icons">cloud_download</span> Download Resume
               </a>
             </button>
-          <div class="col-lg-6">
-            <img src="img/IMG_63542.jpg" style="width: 100%"/>
           </div>
-        </div>
+          <div class="col-lg-6">
+          <?php
+            $pics=$Picture->all(['sh'=>'1']);
+
+            foreach($pics as $key => $pic){
+          ?>
+            <img class="rounded float-end" src="img/<?=$pic['img'];?>" style="width: 90%; margin:0 auto"/>
+
+          <?php
+            }
+          ?>
+          </div>
       </div>
     </section>
     <!-- end About -->
@@ -530,10 +447,10 @@ include_once "base.php";
     </section>
     <!-- end Skills -->
 
-    <!-- start portfolio -->
-    <section id="portfolio" class="text-white pt-5">
+    <!-- start work -->
+    <section id="work" class="text-white pt-5">
       <div class="container" style="padding-top: 100px;">
-        <h3 class="portfolio text-center m-2" style="color: white">Portfolio</h3>
+        <h3 class="work text-center m-2" style="color: white">work</h3>
         <div class="row text-center d-flex justify-content-center mt-5">
           <div
             class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0"
@@ -592,14 +509,14 @@ include_once "base.php";
         </div>
       </div>
     </section>
-    <!-- end portfolio -->
+    <!-- end work -->
 
     <!-- start contact -->
     <section id="contact" class="text-white pt-5">
       <div style="padding-top: 100px">
         <header class="container text-center">
-          <h3 class="dmam">Drop me a message!</h3>
-          <p>Get in touch.</p>
+          <h3 class="dmam">Contact</h3>
+          <p>Drop me a message!</p>
         </header>
         <article class="container py-5">
           <form action="" class="row text-dark d-flex justify-content-center">

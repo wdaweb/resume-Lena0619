@@ -1,9 +1,9 @@
-<h3>新增大頭照</h3>
+<h3>新增圖片</h3>
 <hr>
 <form action="./api/add.php" method="post" enctype="multipart/form-data">
 <table>
     <tr>
-        <td>大頭照</td>
+        <td>圖片</td>
         <td><input type="file" name="img" id=""></td>
     </tr>
     <tr>
