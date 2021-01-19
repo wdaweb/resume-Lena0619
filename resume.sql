@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-01-19 09:32:57
--- 伺服器版本： 10.4.14-MariaDB
--- PHP 版本： 7.4.10
+-- 產生時間： 2021-01-19 17:23:44
+-- 伺服器版本： 10.4.17-MariaDB
+-- PHP 版本： 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,9 +39,9 @@ CREATE TABLE `experience` (
 --
 
 INSERT INTO `experience` (`id`, `work`, `period`, `detail`) VALUES
-(1, 'starbucks', '2015/8-2016/8', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem similique aperiam rerum eligendi dolorum enim maxime asperiores consectetur placeat non nobis reiciendis officiis harum qui, dolorem repellendus accusantium fugit fuga.'),
-(2, '宜家冒易', '2015/3-2018-3', 'fddsfsfsfsffdfdv'),
-(3, 'fdgdgdg', 'dgfdzgg', 'dfgdz');
+(1, '仁寶電腦股份有限公司---採購', '八月 2019 ~ 七月 2020', '1. 料號審核\r\n2. MRO系統料號管理及新建分類\r\n3. 申購單審核及向會計請款'),
+(2, '宜家貿易股份有限公司---英文助理', '三月 2015 ~ 三月 2018', '1. 國外新舊客戶書信往來聯繫並回報主管\r\n2. 樣品寄送和後續追蹤\r\n3. 海空運運費估價、製作出貨文件依各國客戶的需求\r\n4. 通知客戶船期和寄送出貨文件\r\n5. 管理和更新客戶資料\r\n6. 國外客戶催款\r\n7. 國外參展名片做市場調查'),
+(3, 'Starbucks---吧檯人員', '三月 2012 ~ 三月 2013', '1. 點餐/結帳服務\r\n2. 飲品製作\r\n3. 銷售糕點及商品');
 
 -- --------------------------------------------------------
 
@@ -60,8 +60,9 @@ CREATE TABLE `introductions` (
 --
 
 INSERT INTO `introductions` (`id`, `text`, `sh`) VALUES
-(1, '(TEST!!TEST!!TEST!!!)Hi! My name is Lena, a 27 years old girl. I was born in an ordinary family. I have a brother and I am the first child in my family. As my parents were serious about our character so make me become a responsible, honorable, patient personality.', 1),
-(2, 'test2test2test2test2test2test2! hello hello  hello', 1);
+(1, '(TEST!!TEST!!TEST!!!)Hi! My name is Lena, a 27 years old girl. I was born in an ordinary family. I have a brother and I am the first child in my family. As my parents were serious about our character so make me become a responsible, honorable, patient personality.', 0),
+(2, 'test2test2test2test2test2test2! hello hello  hello', 0),
+(3, '嗨! 我是林湘芸，先前的工作經驗讓我接觸到各式各樣的網站，發現自己對網站設計有興趣，因此展開了網站及程式設計的學習之路，目前持續學習中，任何網頁程式設計的工作都歡迎與我聯絡!', 1);
 
 -- --------------------------------------------------------
 
@@ -145,7 +146,8 @@ CREATE TABLE `picture` (
 --
 
 INSERT INTO `picture` (`id`, `img`, `type`, `sh`) VALUES
-(1, 'IMG_63542.jpg', 1, 1);
+(1, 'IMG_63542.jpg', 1, 1),
+(2, 'photo-1610911331371-1cd19301b9e8.jpg', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -253,7 +255,7 @@ ALTER TABLE `experience`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `introductions`
 --
 ALTER TABLE `introductions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `job`
@@ -277,7 +279,7 @@ ALTER TABLE `myinfo`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `picture`
 --
 ALTER TABLE `picture`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `profile`
