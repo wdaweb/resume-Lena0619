@@ -55,6 +55,7 @@ foreach($_POST['id'] as $key => $id){
          case "job":
             $row['reqname']=$_POST['reqname'][$key];
             $row['condi']=$_POST['condi'][$key];
+            $row['sh']=(!empty($_POST['sh']) && in_array($id,$_POST['sh']))?1:0;
          break;
          default:
          // case "introductions":

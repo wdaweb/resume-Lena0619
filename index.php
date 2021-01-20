@@ -207,197 +207,46 @@ include_once "base.php";
   <!-- end About -->
 
   <!-- start Skills -->
-  <section id="skills" class="text-white pt-5">
-    <div class="container text-white" style="padding-top: 100px; vertical-align: middle;">
+  <section id="skills" class="pt-5">
+    <div class="container" style="padding-top: 100px; vertical-align: middle;">
       <h3 class="ski text-center m-2" style="color: white">Skills</h3>
 
-      <div class="row text-center d-flex justify-content-center pt-5">
-        <div class="col-12 col-sm-6 col-xs-6 col-lg-6 mt-3" style="max-width: 320px">
-          <div class="ski_block">
-            <!-- <h5>Front-end</h5> -->
-            <span class="material-icons">code</span>
-            <ul>
-              <li>HTML
-                <div class="circle-wrap">
-                  <div class="circle hm">
-
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-
-              <li>CSS
-                <div class="circle-wrap">
-                  <div class="circle cs">
-
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li>Bootstrap
-                <div class="circle-wrap">
-                  <div class="circle bs">
-
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li>Javascript
-                <div class="circle-wrap">
-                  <div class="circle js">
-
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-            </ul>
-          </div>
+      <div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-3">
+          <img src="img/img9.jpg" style="width: 60%;">
         </div>
-        <div class="col-12 col-sm-6 col-xs-6 col-lg-6 mt-3" style="max-width: 320px">
-          <div class="ski_block">
-            <!-- <h5>Back-end</h5> -->
-            <span class="material-icons">topic</span>
-            <ul>
-              <li>PHP
-                <div class="circle-wrap">
-                  <div class="circle pp">
 
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
+        <div class="col-md-6 mt-5">
+        <?php
+        $jobs = $Job->all(['sh'=>'1']);
+        foreach ($jobs as $key => $job) {
+        ?>
+          <p class="text-white mb-4"><?=$job['reqname']?>: <?=$job['condi']?></p>
+        <?php
+        }
+        ?>
+        <?php
+          $skills = $Skills->all();
 
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
+          foreach ($skills as $key => $skill) {
+          ?>
+          
+            <h5 class="pg-title"><?=$skill['ski']?></h5>
+            <div class="pg p mb-3">
+                <div class="pg-bar" style="width:<?=$skill['percentage']?>;">
+                    <div class="pg-value"><?=$skill['percentage']?></div>
                 </div>
-              </li>
-
-              <li>mySQL
-                <div class="circle-wrap">
-                  <div class="circle sq">
-
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-            </ul>
-          </div>
+            </div>
+            <?php
+          }
+            ?>
+          
         </div>
-        <div class="col-12 col-sm-6 col-lg-6 mt-3" style="max-width: 320px">
-          <div class="ski_block">
-            <!-- <h5>Computer Graphics</h5> -->
-            <span class="material-icons">brush</span>
-            <ul>
-              <li>Photoshop
-                <div class="circle-wrap">
-                  <div class="circle ps">
 
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
+    </div>
+</div>
 
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-              <li>illustrator
-                <div class="circle-wrap">
-                  <div class="circle il">
-
-                    <div class="mask full">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="mask half">
-                      <div class="fill"></div>
-                    </div>
-
-                    <div class="inside-circle">
-                      50%
-                    </div>
-
-                  </div>
-                </div>
-              </li>
-
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- end Skills -->
@@ -476,7 +325,7 @@ include_once "base.php";
             </form>
           </div>
           <div class="col-lg-6">
-          <h5 >My Information</h5>
+          <h5 >Personal information</h5>
           <table class="m-auto"  style="background: gray;">
           <?php
             $myinfos = $Myinfo->all();

@@ -640,6 +640,66 @@ div.myWork:hover img {
 div.myWork:hover {
   box-shadow: 1px 1px 8px 4px white;
 }
+
+/*progress bar*/
+.pg-title{
+  font-size: 15px;
+  font-weight: bold;
+  color: #97a5b6!important;
+  margin-bottom: 5px;
+}
+.pg{
+  height: 20px;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  border-radius: 50px;
+  box-shadow: none;
+  padding: 5px 8px;
+  overflow: visible;
+  margin-bottom: 30px;
+}
+.pg .pg-bar{
+  position: relative;
+  -webkit-animation: animate-positive 2s;
+  animation: animate-positive 2s;
+}
+.pg .pg-bar:after{
+  content: "";
+  width: 1px;
+  height: 28px;
+  position: absolute;
+  right: 0;
+  top: -6px;
+}
+.pg .pg-value{
+  font-size: 13px;
+  font-weight: bold;
+  color: #97a5b6;
+  position: absolute;
+  bottom: 3px;
+  right: 0px;
+}
+.pg.p .pg-bar:after{
+  background: rgb(176, 241, 241, 0.8)!important;
+  width: 100%;
+  height: 7px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  
+}
+
+@-webkit-keyframes animate-positive{
+  0% { width: 0%; }
+}
+@keyframes animate-positive{
+  0% { width: 0%; }
+}
+
+
+
+
+
 /* end work */
 
 /* start contact */
