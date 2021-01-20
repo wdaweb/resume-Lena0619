@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2021-01-19 17:23:44
+-- 產生時間： 2021-01-20 20:23:25
 -- 伺服器版本： 10.4.17-MariaDB
 -- PHP 版本： 8.0.0
 
@@ -83,7 +83,8 @@ CREATE TABLE `job` (
 
 INSERT INTO `job` (`id`, `reqname`, `condi`, `sh`) VALUES
 (1, '地區', '台北、新北、桃園', 0),
-(4, '休假制度', '周休二日', 0);
+(4, '休假制度', '周休二日', 0),
+(5, '求職條件', '網頁程式設計師、前/後端程式設計師', 1);
 
 -- --------------------------------------------------------
 
@@ -187,7 +188,14 @@ CREATE TABLE `skills` (
 
 INSERT INTO `skills` (`id`, `ski`, `percentage`) VALUES
 (1, 'HTML', '90%'),
-(2, 'CSS', '85%');
+(2, 'CSS', '85%'),
+(3, 'Javascript', '80%'),
+(4, 'jQuery', '80%'),
+(5, 'bootstrap', '85%'),
+(6, 'PHP', '80%'),
+(7, 'mySQL', '80%'),
+(8, 'Illustrator', '75%'),
+(9, 'Photoshop', '70%');
 
 --
 -- 已傾印資料表的索引
@@ -261,7 +269,7 @@ ALTER TABLE `introductions`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `job`
 --
 ALTER TABLE `job`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `login`
@@ -291,7 +299,7 @@ ALTER TABLE `profile`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `skills`
 --
 ALTER TABLE `skills`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
