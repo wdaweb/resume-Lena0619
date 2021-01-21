@@ -2,7 +2,7 @@
 date_default_timezone_set("Asia/Taipei");
 session_start();
 
-// $Login=new DB('resumelogin');
+
 $Login=new DB('login');
 $Introductions=new DB('introductions');
 $Experience=new DB('experience');
@@ -15,15 +15,15 @@ $Job=new DB('job');
 
 
 class DB{
-    // protected $dsn="mysql:host=localhost;dbname=s1090416;charset=utf8";
     protected $dsn="mysql:host=localhost;dbname=resume;charset=utf8";
+    // protected $dsn="mysql:host=localhost;dbname=s1090416;charset=utf8";
     protected $table="";
     protected $pdo="";
 
     function __construct($table){
         $this->table=$table;
-        // $this->pdo=new PDO($this->dsn,'s1090416','s1090416');
         $this->pdo=new PDO($this->dsn,'root','');
+        // $this->pdo=new PDO($this->dsn,'s1090416','s1090416');
     }
 
     function all(...$arg){

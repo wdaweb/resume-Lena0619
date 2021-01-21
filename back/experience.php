@@ -1,7 +1,4 @@
 
-
-
-<!-- <div style="width:99%; height:87%; margin:auto; overflow:auto; border:#666 1px solid;"> -->
 <div>
 <h3>經驗區管理</h3>
     <form method="post" action="./api/edit.php">
@@ -38,7 +35,6 @@
             <tbody>
                 <tr>
                     <input type="hidden" name="table" value="<?=$do;?>">
-                    <!-- 新增Introduction的內容,晚一點做 -->
                     <td width="200px">
                     <input type="button"
                             onclick="op('#cover','#cvr','./modal/<?=$do;?>.php?table=<?=$do;?>')"

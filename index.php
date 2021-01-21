@@ -23,14 +23,8 @@ include_once "base.php";
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Langar&family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet" />
-  <!-- slick -->
-  <link rel="stylesheet" href="plugin/slick.css">
-  <link rel="stylesheet" href="plugin/slick-theme.css">
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script src="plugin/slick.min.js"></script>
 
-  <title>ShiangYun's website</title>
+  <title>Shiang's Website</title>
 </head>
 
 <body>
@@ -109,7 +103,6 @@ include_once "base.php";
   <section id="header">
     <div class="container">
       <div class="header_pic">
-        <!-- <img src="img/IMG_6266.jpg" style="width:400px;padding:100px 0px;"> -->
         <img id="mainpic" src="img/img5.jpg" style="width: 80%; padding-top: 70px" />
         <img src="img/syimg.png" class="sy_word wow zoomInRight" style="max-height:586px" />
         <div class="header_wel">
@@ -342,11 +335,11 @@ include_once "base.php";
         </div>
       </article>
 
-      <!-- start footer -->
+
       <footer style="color: white">
         <small style="float: right; margin: 20px">Design by <span class="text-warning">Shiang-Yun Lin</span></small>
       </footer>
-      <!-- end footer -->
+
     </div>
   </section>
   <!-- end contact -->
@@ -375,15 +368,6 @@ include_once "base.php";
     $("#mainListDiv").fadeIn();
   });
 
-  // $(window).scroll(function() {
-  //             if ($(document).scrollTop() > 50) {
-  //                 $('.nav, div.main_list').addClass('affix');
-  //                 console.log("OK");
-  //             } else {
-  //                 $('.nav, div.main_list').removeClass('affix');
-  //             }
-  // });
-
   //slick輪播
   $(".mywork").slick({
     dots: true,
@@ -391,10 +375,3 @@ include_once "base.php";
     slidesToScroll: 4
   });
 </script>
-
-<!-- 好看的動畫
-https://codepen.io/ruslanvybor/pen/gOPVjax 
-https://codepen.io/jonneal/pen/GRJRzVK
-https://codepen.io/kyledws/pen/Gvelt
-card hover effect
--->
