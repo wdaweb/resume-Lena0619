@@ -205,40 +205,40 @@ include_once "base.php";
       <h3 class="ski text-center m-2" style="color: white">Skills</h3>
 
       <div class="container">
-    <div class="row">
-        <div class="col-md-6 mt-3">
-          <img src="img/img9.jpg" style="width: 60%;">
-        </div>
+        <div class="row">
+          <div class="col-md-6 mt-3">
+            <img src="img/img9.jpg" style="width: 60%;">
+          </div>
 
-        <div class="col-md-6 mt-5">
-        <?php
-        $jobs = $Job->all(['sh'=>'1']);
-        foreach ($jobs as $key => $job) {
-        ?>
-          <p class="text-white mb-4"><?=$job['reqname']?>: <?=$job['condi']?></p>
-        <?php
-        }
-        ?>
-        <?php
-          $skills = $Skills->all();
-
-          foreach ($skills as $key => $skill) {
-          ?>
-          
-            <h5 class="pg-title"><?=$skill['ski']?></h5>
-            <div class="pg p mb-3">
-                <div class="pg-bar" style="width:<?=$skill['percentage']?>;">
-                    <div class="pg-value"><?=$skill['percentage']?></div>
-                </div>
-            </div>
+          <div class="col-md-6 mt-5">
             <?php
-          }
+            $jobs = $Job->all(['sh' => '1']);
+            foreach ($jobs as $key => $job) {
             ?>
-          
-        </div>
+              <p class="text-white mb-4"><?= $job['reqname'] ?>: <?= $job['condi'] ?></p>
+            <?php
+            }
+            ?>
+            <?php
+            $skills = $Skills->all();
 
-    </div>
-</div>
+            foreach ($skills as $key => $skill) {
+            ?>
+
+              <h5 class="pg-title"><?= $skill['ski'] ?></h5>
+              <div class="pg p mb-3">
+                <div class="pg-bar" style="width:<?= $skill['percentage'] ?>;">
+                  <div class="pg-value"><?= $skill['percentage'] ?></div>
+                </div>
+              </div>
+            <?php
+            }
+            ?>
+
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </section>
@@ -249,30 +249,24 @@ include_once "base.php";
     <div class="container" style="padding-top: 100px;">
       <h3 class="work text-center m-2" style="color: white">Works</h3>
       <div class="row text-center d-flex justify-content-center mt-5">
-        <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width:250px;max-height:250px">
-          <img src="https://picsum.photos/300/250/?random=1" />
-          <a href="#" class="myWork_link"><span class="material-icons">link</span></a>
-        </div>
-        <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width: 250px">
-          <img src="https://picsum.photos/300/250/?random=2" />
-          <a href="#" class="myWork_link"><span class="material-icons">link</span></a>
-        </div>
-        <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width: 250px">
-          <img src="https://picsum.photos/300/250/?random=3" />
-          <a href="#" class="myWork_link"><span class="material-icons">link</span></a>
-        </div>
-        <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width: 250px">
-          <img src="https://picsum.photos/300/250/?random=4" />
-          <a href="#" class="myWork_link"><span class="material-icons">link</span></a>
-        </div>
-        <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width: 250px">
-          <img src="https://picsum.photos/300/250/?random=5" />
-          <a href="#" class="myWork_link"><span class="material-icons">link</span></a>
-        </div>
-        <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width: 250px">
-          <img src="https://picsum.photos/300/250/?random=6" />
-          <a href="#" class="myWork_link"><span class="material-icons">link</span></a>
-        </div>
+        <?php
+        $profiles = $Profile->all();
+
+        foreach ($profiles as $key => $profile) {
+        ?>
+
+          <div class="myWork col-sm-6 col-xxl-4 m-1 bg-light p-0" style="max-width:300px;max-height:300px">
+            <img src="img/<?=$profile['img']?>" style="position:center;height:100%;display:block;margin-right:auto;margin-left:auto"/>
+            <a href="<?=$profile['link']?>" target="_blank" class="myWork_link">
+              <div class="text-center m-3">
+                <span class="material-icons">link</span>
+                <small><?=$profile['descri']?></small>
+              </div>
+            </a>
+          </div>
+        <?php
+        }
+        ?>
       </div>
     </div>
   </section>
@@ -283,12 +277,12 @@ include_once "base.php";
     <div style="padding-top: 100px">
       <header class="container text-center">
         <h3 class="dmam">Contact</h3>
-        
+
       </header>
       <article class="container py-5">
         <div class="row text-center" style="vertical-align: middle;">
           <div class="col-lg-6">
-          <h5>Drop me a message!</h5>
+            <h5>Drop me a message!</h5>
             <form action="" class="row text-dark d-flex justify-content-center">
               <div class="form-floating mb-2 col-10 col-lg-9">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
@@ -318,17 +312,17 @@ include_once "base.php";
             </form>
           </div>
           <div class="col-lg-6">
-          <h5 >Personal information</h5>
-          <table class="m-auto"  style="background: gray;">
-          <?php
-            $myinfos = $Myinfo->all();
+            <h5>Personal information</h5>
+            <table class="m-auto" style="background: gray;">
+              <?php
+              $myinfos = $Myinfo->all();
 
-            foreach ($myinfos as $myinfo) {
-              echo "<tr><td class='d-flex float-left'>Name: ".$myinfo['name']."</td></tr>";
-              echo "<tr><td class='d-flex float-left'>Email: ".$myinfo['email']."</td></tr>";
-            }
-          ?>
-          </table>
+              foreach ($myinfos as $myinfo) {
+                echo "<tr><td class='d-flex float-left'>Name: " . $myinfo['name'] . "</td></tr>";
+                echo "<tr><td class='d-flex float-left'>Email: " . $myinfo['email'] . "</td></tr>";
+              }
+              ?>
+            </table>
 
 
           </div>
